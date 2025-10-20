@@ -42,18 +42,18 @@
 	}
 </script>
 
-<section id="home" class="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 to-white relative">
+<section id="home" class="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 to-white dark:from-gray-900 dark:to-gray-800 relative">
 	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
 		<div class="text-center">
 			<!-- Main Headline -->
-			<h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6">
-				Hi, I'm <span class="text-blue-600">{name}</span>.
+			<h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-white mb-6">
+				Hi, I'm <span class="text-blue-600 dark:text-blue-400">{name}</span>.
 				<br />
-				<span class="text-gray-700">{valueProposition}</span>
+				<span class="text-gray-700 dark:text-gray-300">{valueProposition}</span>
 			</h1>
 
 			<!-- Sub-headline -->
-			<p class="text-lg sm:text-xl md:text-2xl text-gray-600 mb-12 max-w-4xl mx-auto leading-relaxed">
+			<p class="text-lg sm:text-xl md:text-2xl text-gray-600 dark:text-gray-400 mb-12 max-w-4xl mx-auto leading-relaxed">
 				{subHeadline}
 			</p>
 
@@ -61,7 +61,7 @@
 			<div class="mb-16">
 				<button
 					on:click={scrollToWork}
-					class="inline-flex items-center px-8 py-4 text-lg font-semibold text-white bg-blue-600 hover:bg-blue-700 rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-blue-300"
+					class="inline-flex items-center px-8 py-4 text-lg font-semibold text-white bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-800"
 				>
 					View My Work
 					<svg
@@ -88,11 +88,11 @@
 						href={social.url}
 						target="_blank"
 						rel="noopener noreferrer"
-						class="w-12 h-12 bg-gray-100 hover:bg-blue-600 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 group"
+						class="w-12 h-12 bg-gray-100 dark:bg-gray-800 hover:bg-blue-600 dark:hover:bg-blue-500 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 group"
 						aria-label={social.name}
 					>
 						<svg
-							class="w-6 h-6 text-gray-600 group-hover:text-white transition-colors"
+							class="w-6 h-6 text-gray-600 dark:text-gray-400 group-hover:text-white transition-colors"
 							fill="currentColor"
 							viewBox="0 0 24 24"
 						>
@@ -111,11 +111,11 @@
 			class="flex flex-col items-center space-y-2 group cursor-pointer focus:outline-none"
 			aria-label="Scroll to next section"
 		>
-			<div class="w-6 h-10 border-2 border-gray-400 group-hover:border-blue-600 rounded-full flex justify-center transition-colors duration-300">
-				<div class="w-1 h-3 bg-gray-400 group-hover:bg-blue-600 rounded-full mt-2 animate-pulse transition-colors duration-300"></div>
+			<div class="w-6 h-10 border-2 border-gray-400 dark:border-gray-600 group-hover:border-blue-600 dark:group-hover:border-blue-400 rounded-full flex justify-center transition-colors duration-300">
+				<div class="w-1 h-3 bg-gray-400 dark:bg-gray-600 group-hover:bg-blue-600 dark:group-hover:bg-blue-400 rounded-full mt-2 animate-pulse transition-colors duration-300"></div>
 			</div>
 			<!-- Text hint - visible on larger screens -->
-			<p class="text-xs text-gray-500 group-hover:text-blue-600 text-center hidden sm:block transition-colors duration-300">
+			<p class="text-xs text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-400 text-center hidden sm:block transition-colors duration-300">
 				Scroll down
 			</p>
 		</button>

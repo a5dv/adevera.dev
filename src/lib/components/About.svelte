@@ -8,14 +8,14 @@
 	export let imageAlt = "Adrian Carlos A. de Vera - Professional headshot";
 </script>
 
-<section id="about" class="py-20 bg-white">
+<section id="about" class="py-20 bg-white dark:bg-gray-900">
 	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 		<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 			<!-- Left Column - Image -->
 			<div class="order-2 lg:order-1">
 				<div class="relative">
 					<!-- Main Image Container -->
-					<div class="relative overflow-hidden rounded-2xl shadow-2xl">
+					<div class="relative overflow-hidden rounded-2xl shadow-2xl dark:shadow-blue-900/20">
 						<img
 							src={imageUrl}
 							alt={imageAlt}
@@ -25,10 +25,10 @@
 						<!-- Overlay for better text contrast if needed -->
 						<div class="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent"></div>
 					</div>
-					
+
 					<!-- Decorative Elements -->
-					<div class="absolute -top-4 -right-4 w-24 h-24 bg-blue-600 rounded-full opacity-20 blur-xl"></div>
-					<div class="absolute -bottom-4 -left-4 w-32 h-32 bg-purple-600 rounded-full opacity-20 blur-xl"></div>
+					<div class="absolute -top-4 -right-4 w-24 h-24 bg-blue-600 dark:bg-blue-500 rounded-full opacity-20 blur-xl"></div>
+					<div class="absolute -bottom-4 -left-4 w-32 h-32 bg-purple-600 dark:bg-purple-500 rounded-full opacity-20 blur-xl"></div>
 				</div>
 			</div>
 
@@ -37,18 +37,18 @@
 				<div class="space-y-8">
 					<!-- Section Header -->
 					<div>
-						<h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+						<h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">
 							About Me
 						</h2>
-						<div class="w-20 h-1 bg-blue-600 rounded-full"></div>
+						<div class="w-20 h-1 bg-blue-600 dark:bg-blue-400 rounded-full"></div>
 					</div>
 
 					<!-- Bio Content -->
 					<div class="space-y-6">
-						<p class="text-lg text-gray-600 leading-relaxed">
+						<p class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
 							{bio.paragraph1}
 						</p>
-						<p class="text-lg text-gray-600 leading-relaxed">
+						<p class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
 							{bio.paragraph2}
 						</p>
 					</div>
@@ -56,12 +56,12 @@
 					<!-- Stats or Highlights -->
 					<div class="grid grid-cols-2 gap-8 pt-8">
 						<div class="text-center lg:text-left">
-							<div class="text-3xl font-bold text-blue-600 mb-2">4+</div>
-							<div class="text-sm text-gray-600 uppercase tracking-wide">Years Experience</div>
+							<div class="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2">4+</div>
+							<div class="text-sm text-gray-600 dark:text-gray-400 uppercase tracking-wide">Years Experience</div>
 						</div>
 						<!-- <div class="text-center lg:text-left">
-							<div class="text-3xl font-bold text-blue-600 mb-2">100K+</div>
-							<div class="text-sm text-gray-600 uppercase tracking-wide">Daily Transactions</div>
+							<div class="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2">100K+</div>
+							<div class="text-sm text-gray-600 dark:text-gray-400 uppercase tracking-wide">Daily Transactions</div>
 						</div> -->
 					</div>
 
@@ -69,7 +69,7 @@
 					<div class="pt-8">
 						<a
 							href="#contact"
-							class="inline-flex items-center px-6 py-3 text-base font-medium text-blue-600 bg-blue-50 hover:bg-blue-100 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-4 focus:ring-blue-300"
+							class="inline-flex items-center px-6 py-3 text-base font-medium text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/30 hover:bg-blue-100 dark:hover:bg-blue-900/50 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-800"
 							on:click={(e) => {
 								e.preventDefault();
 								const target = document.querySelector('#contact');

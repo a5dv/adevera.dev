@@ -33,17 +33,17 @@
 	}
 </script>
 
-<section id="contact" class="py-20 bg-gradient-to-br from-gray-900 to-blue-900 text-white">
+<section id="contact" class="py-20 bg-gradient-to-br from-gray-900 to-blue-900 dark:from-gray-950 dark:to-blue-950 text-white">
 	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 		<div class="text-center">
 			<!-- Section Header -->
 			<div class="mb-16">
 				<h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
 					Let's Build Something
-					<span class="text-blue-400">Together</span>
+					<span class="text-blue-400 dark:text-blue-300">Together</span>
 				</h2>
-				<p class="text-lg lg:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-					I'm always excited to work on new projects and collaborate with amazing people. 
+				<p class="text-lg lg:text-xl text-gray-300 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed">
+					I'm always excited to work on new projects and collaborate with amazing people.
 					Whether you have a project in mind or just want to chat about technology, I'd love to hear from you.
 				</p>
 			</div>
@@ -52,7 +52,7 @@
 			<div class="mb-16">
 				<button
 					on:click={handleEmailClick}
-					class="inline-flex items-center px-8 py-4 text-lg font-semibold bg-blue-600 hover:bg-blue-700 rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-blue-300"
+					class="inline-flex items-center px-8 py-4 text-lg font-semibold bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-800"
 				>
 					<svg
 						class="mr-3 w-5 h-5"
@@ -75,8 +75,8 @@
 			<!-- Contact Information -->
 			<div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
 				<!-- Email -->
-				<div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300">
-					<div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+				<div class="bg-white/10 dark:bg-white/5 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 dark:hover:bg-white/10 transition-all duration-300">
+					<div class="w-12 h-12 bg-blue-600 dark:bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
 						<svg
 							class="w-6 h-6 text-white"
 							fill="none"
@@ -95,7 +95,7 @@
 					<h3 class="text-lg font-semibold mb-2">Email</h3>
 					<button
 						on:click={copyEmail}
-						class="text-blue-400 hover:text-blue-300 transition-colors cursor-pointer"
+						class="text-blue-400 dark:text-blue-300 hover:text-blue-300 dark:hover:text-blue-200 transition-colors cursor-pointer"
 						title="Click to copy"
 					>
 						{email}
@@ -103,8 +103,8 @@
 				</div>
 
 				<!-- Phone -->
-				<div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300">
-					<div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+				<div class="bg-white/10 dark:bg-white/5 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 dark:hover:bg-white/10 transition-all duration-300">
+					<div class="w-12 h-12 bg-blue-600 dark:bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
 						<svg
 							class="w-6 h-6 text-white"
 							fill="none"
@@ -123,15 +123,15 @@
 					<h3 class="text-lg font-semibold mb-2">Phone</h3>
 					<a
 						href="tel:{phone}"
-						class="text-blue-400 hover:text-blue-300 transition-colors"
+						class="text-blue-400 dark:text-blue-300 hover:text-blue-300 dark:hover:text-blue-200 transition-colors"
 					>
 						{phone}
 					</a>
 				</div>
 
 				<!-- Location -->
-				<div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300">
-					<div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+				<div class="bg-white/10 dark:bg-white/5 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 dark:hover:bg-white/10 transition-all duration-300">
+					<div class="w-12 h-12 bg-blue-600 dark:bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
 						<svg
 							class="w-6 h-6 text-white"
 							fill="none"
@@ -154,24 +154,24 @@
 						</svg>
 					</div>
 					<h3 class="text-lg font-semibold mb-2">Location</h3>
-					<p class="text-blue-400">{location}</p>
+					<p class="text-blue-400 dark:text-blue-300">{location}</p>
 				</div>
 			</div>
 
 			<!-- Social Links -->
-			<div class="border-t border-white/20 pt-8">
-				<p class="text-gray-300 mb-6">Follow me on social media</p>
+			<div class="border-t border-white/20 dark:border-white/10 pt-8">
+				<p class="text-gray-300 dark:text-gray-400 mb-6">Follow me on social media</p>
 				<div class="flex justify-center space-x-6">
 					{#each socialLinks as social}
 						<a
 							href={social.url}
 							target="_blank"
 							rel="noopener noreferrer"
-							class="w-12 h-12 bg-white/10 hover:bg-blue-600 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 group"
+							class="w-12 h-12 bg-white/10 dark:bg-white/5 hover:bg-blue-600 dark:hover:bg-blue-500 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 group"
 							aria-label={social.name}
 						>
 							<svg
-								class="w-6 h-6 text-gray-300 group-hover:text-white transition-colors"
+								class="w-6 h-6 text-gray-300 dark:text-gray-400 group-hover:text-white transition-colors"
 								fill="currentColor"
 								viewBox="0 0 24 24"
 							>
@@ -186,10 +186,10 @@
 </section>
 
 <!-- Footer -->
-<footer class="bg-gray-900 text-white py-8">
+<footer class="bg-gray-900 dark:bg-black text-white py-8">
 	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 		<div class="text-center">
-			<p class="text-gray-400">
+			<p class="text-gray-400 dark:text-gray-500">
 				© 2025 adevera.dev. Built with ❤️ using Svelte and TailwindCSS.
 			</p>
 		</div>

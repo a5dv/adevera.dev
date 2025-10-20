@@ -3,6 +3,18 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<script>
+			// Prevent flash of unstyled content - set dark mode before page renders
+			(function () {
+				const theme = localStorage.getItem('theme');
+				if (theme === 'light') {
+					document.documentElement.classList.remove('dark');
+				} else {
+					// Default to dark mode
+					document.documentElement.classList.add('dark');
+				}
+			})();
+		</script>
 		%sveltekit.head%
 	</head>
 	<body data-sveltekit-preload-data="hover">
