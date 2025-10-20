@@ -1,7 +1,7 @@
 <script lang="ts">
-	export let email = "your.email@example.com";
-	export let phone = "+1 (555) 123-4567";
-	export let location = "San Francisco, CA";
+	export let email = "adr.cadv@gmail.com";
+	export let phone = "+639274161009";
+	export let location = "Philippines";
 	
 	const socialLinks = [
 		{

@@ -4,8 +4,8 @@
 		paragraph1: "I'm a passionate full-stack developer with over 5 years of experience creating digital solutions that make a difference. My journey began with a curiosity about how things work, which led me to discover the perfect blend of creativity and logic in software development.",
 		paragraph2: "When I'm not coding, you'll find me exploring new technologies, contributing to open-source projects, or sharing knowledge with the developer community. I believe in writing clean, maintainable code and creating user experiences that are both beautiful and functional."
 	};
-	export let imageUrl = "/api/placeholder/400/400"; // Placeholder for headshot
-	export let imageAlt = "Professional headshot";
+	export let imageUrl = "https://res.cloudinary.com/dpdvljzo2/image/upload/f_auto,q_auto/v1760965693/IMG_2602_ymsoaz.heic"; // Professional headshot with auto format conversion
+	export let imageAlt = "Adrian Carlos A. de Vera - Professional headshot";
 </script>
 
 <section id="about" class="py-20 bg-white">

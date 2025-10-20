@@ -56,7 +56,7 @@
 					class="text-xl font-bold text-gray-900 hover:text-blue-600 transition-colors"
 					on:click={(e) => smoothScroll(e, '#home')}
 				>
-					Portfolio
+					A5DV
 				</a>
 			</div>
 

@@ -5,47 +5,17 @@
 	export let projects = [
 		{
 			id: 1,
-			title: "Payment Orchestrator Modernization",
-			description: "Cloud-native microservice architecture migration for high-volume payment processing",
-			image: "/api/placeholder/600/400",
-			tags: ["Node.js", "Kafka", "DynamoDB", "AWS", "Kubernetes", "Terraform"],
-			liveUrl: "#",
-			githubUrl: "#",
+			title: "Togeda.ai",
+			description: "AI-powered collaboration platform built with modern web technologies",
+			image: "https://res.cloudinary.com/dpdvljzo2/image/upload/f_auto,q_auto/v1760967202/togedaai_sg2zku.jpg",
+			tags: ["TypeScript", "Next.js", "Firebase", "Vercel"],
+			liveUrl: "https://togeda.ai",
+			githubUrl: null, // Private repository
 			caseStudy: {
-				overview: "Engineered the migration of a high-volume Payment Orchestrator to a cloud-native microservice architecture on AWS, significantly enhancing system resilience and scalability.",
-				challenge: "Migrating a legacy payment system processing 100,000+ daily transactions without downtime while improving performance and scalability.",
-				solution: "Implemented high-performance, event-driven backend services using NodeJS, Kafka, and DynamoDB. Automated deployment through GitOps workflow with Kubernetes, Terraform, and ArgoCD.",
-				results: "Successfully processes over 100,000 payments daily in real-time with enhanced system resilience and zero-downtime deployments."
-			}
-		},
-		{
-			id: 2,
-			title: "Serverless Payment Orchestrator",
-			description: "End-to-end serverless payment processing system with real-time transaction management",
-			image: "/api/placeholder/600/400",
-			tags: ["AWS Lambda", "DynamoDB Streams", "React", "GraphQL", "GitLab CI"],
-			liveUrl: "#",
-			githubUrl: "#",
-			caseStudy: {
-				overview: "Led an Agile team of 3 engineers in developing a serverless Payment Orchestrator from the ground up, handling massive transaction volumes with real-time processing capabilities.",
-				challenge: "Building a scalable, serverless architecture that could handle 100,000+ daily transactions while maintaining real-time processing and management capabilities.",
-				solution: "Architected a full-stack solution with NodeJS backend on AWS Lambda, event-driven lifecycle using DynamoDB Streams, and ReactJS/GraphQL interface. Established automated CI/CD pipelines with Docker containerization.",
-				results: "Successfully processes over 100,000 transactions per day with improved deployment reliability and application stability through automated pipelines."
-			}
-		},
-		{
-			id: 3,
-			title: "Pivot Plan It Platform",
-			description: "Full-stack MVP connecting service providers and consumers with integrated booking and payments",
-			image: "/api/placeholder/600/400",
-			tags: ["TypeScript", "Next.js", "PostgreSQL", "Edge Functions"],
-			liveUrl: "#",
-			githubUrl: "#",
-			caseStudy: {
-				overview: "Partnered with founder as Technical Consultant to translate business concept into technical roadmap, leading end-to-end development of a scalable marketplace platform.",
-				challenge: "Developing a cost-effective, scalable platform within startup budget constraints while ensuring secure authentication, intuitive workflows, and payment integration.",
-				solution: "Architected using NodeJS TypeScript Edge functions, NextJS, and PostgreSQL. Implemented strategic solutions including secure user authentication, booking workflows, and integrated payments.",
-				results: "Successfully launched MVP with lean, rapid deployment strategy, enabling affordable market entry while maintaining scalability for future growth."
+				overview: "Togeda.ai is a modern AI-powered collaboration platform built with cutting-edge web technologies, focusing on seamless user experience and real-time functionality.",
+				challenge: "Building a scalable, real-time collaboration platform that leverages AI capabilities while maintaining fast performance and excellent user experience across devices.",
+				solution: "Architected using TypeScript and Next.js for type-safe, server-side rendered frontend, Firebase for real-time database and authentication, and deployed on Vercel for optimal performance and global CDN distribution.",
+				results: "Successfully launched production platform with real-time collaboration features, AI integration, and seamless user experience. Deployed on Vercel with automatic scaling and global edge network."
 			}
 		}
 	];
@@ -130,14 +100,16 @@
 							>
 								Live Demo →
 							</a>
-							<a
-								href={project.githubUrl}
-								target="_blank"
-								rel="noopener noreferrer"
-								class="text-gray-600 hover:text-gray-800 text-sm font-medium transition-colors"
-							>
-								GitHub →
-							</a>
+							{#if project.githubUrl}
+								<a
+									href={project.githubUrl}
+									target="_blank"
+									rel="noopener noreferrer"
+									class="text-gray-600 hover:text-gray-800 text-sm font-medium transition-colors"
+								>
+									GitHub →
+								</a>
+							{/if}
 						</div>
 					</div>
 				</div>
@@ -168,6 +140,7 @@
 						<button
 							on:click={closeModal}
 							class="text-gray-400 hover:text-gray-600 transition-colors"
+							aria-label="Close modal"
 						>
 							<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
@@ -226,14 +199,16 @@
 					>
 						View Live Demo
 					</a>
-					<a
-						href={selectedProject.githubUrl}
-						target="_blank"
-						rel="noopener noreferrer"
-						class="mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm transition-colors"
-					>
-						View Code
-					</a>
+					{#if selectedProject.githubUrl}
+						<a
+							href={selectedProject.githubUrl}
+							target="_blank"
+							rel="noopener noreferrer"
+							class="mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm transition-colors"
+						>
+							View Code
+						</a>
+					{/if}
 				</div>
 			</div>
 		</div>

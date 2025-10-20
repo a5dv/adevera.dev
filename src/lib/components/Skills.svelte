@@ -151,10 +151,6 @@
 						<div class="text-sm text-gray-600 uppercase tracking-wide">Years Experience</div>
 					</div>
 					<div class="text-center">
-						<div class="text-3xl lg:text-4xl font-bold text-blue-600 mb-2">100K+</div>
-						<div class="text-sm text-gray-600 uppercase tracking-wide">Daily Transactions</div>
-					</div>
-					<div class="text-center">
 						<div class="text-3xl lg:text-4xl font-bold text-blue-600 mb-2">20+</div>
 						<div class="text-sm text-gray-600 uppercase tracking-wide">Technologies Used</div>
 					</div>
